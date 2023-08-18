@@ -1,28 +1,33 @@
-# UM Show Socials Anywhere
-WP x Ultimate Member function that adds a shortcode to show authors'/users' socials anywhere
+# Display Social Media Links Anywhere with UM Show Socials
+
+**UM Show Socials** is a WordPress plugin that leverages the power of Ultimate Member (UM) to seamlessly integrate a shortcode for showcasing authors' or users' social media profiles on your website.
 
 ## Installation
-Paste the content of `dmkrtz_um_show_socials.php` into your theme functions.php or where ever you store your custom functions.
+To integrate UM Show Socials into your website, follow these steps:
+
+1. Copy the contents of `dmkrtz_um_show_socials.php`.
+2. Paste the copied content into your theme's `functions.php` file or any other location where you manage custom functions.
 
 ## Usage
-Use the shortcode `[um-show-socials]` in your post or page template to echo the author social links anywhere you like.
+Easily display social media links with the `[um-show-socials]` shortcode within your post or page templates. This shortcode offers the flexibility to present author social links wherever you prefer.
 
-For posts and pages the shortcode will retrieve the author social links.
-
-Anywhere else it will display the currently queried/logged in user social links.
+- When used in posts and pages, the shortcode will retrieve the social links of the respective author.
+- In all other instances, the shortcode will exhibit social links of the currently logged in or queried user.
 
 ## Attributes
-The shortcode allows these attributes:
-- style (allows to populate the `<div>` style attribute)
-- force-user (set to "true" to force showing current user socials)
+The `[um-show-socials]` shortcode supports the following attributes:
+
+- **style:** Customize the `<div>` element's style attribute by providing the desired styling options.
+- **force-user:** By using this attribute, the shortcode displays the social media links of the currently logged in user, regardless of the context.
 
 ### Examples
-- `[um-show-socials style="text-align: center;"]`
--> `<div class='um-profile-connect um-member-connect' style="text-align: center;">`
-- `[um-show-socials force-user]`
--> prevents fetching of the post or page author but show current user socials instead
+1. `[um-show-socials style="text-align: center;"]`
+   Output: `<div class='um-profile-connect um-member-connect' style="text-align: center;">`
+   
+2. `[um-show-socials force-user]`
+   Effect: Ensures the display of social media links for the currently logged in user, overriding any post or page author details.
 
 ## Dependencies
-Of course this shortcode needs the user plugin [Ultimate Member](https://ultimatemember.com/) in order to work.
+To utilize this shortcode, it is essential to have the [Ultimate Member](https://ultimatemember.com/) plugin installed on your WordPress site.
 
-A function check is included in the shortcode and will return an error message if the "UM" class doesn't exist.
+A built-in function check within the shortcode ensures compatibility and displays an error message if the "UM" class is unavailable.
