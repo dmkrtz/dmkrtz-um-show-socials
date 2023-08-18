@@ -1,3 +1,6 @@
+<?php
+
+/* https://github.com/dmkrtz/dmkrtz-um-show-socials */
 add_shortcode("um-show-socials", "dmkrtz_um_show_socials");
 function dmkrtz_um_show_socials( $atts ) {
 	// make sure Ultimate Member is active
