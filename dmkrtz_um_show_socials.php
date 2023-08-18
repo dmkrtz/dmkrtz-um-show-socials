@@ -28,10 +28,10 @@ function dmkrtz_um_show_socials($atts) {
     $style = isset($atts['style']) ? " style='{$atts['style']}'" : '';
     $output = "<div class='um-profile-connect um-member-connect'$style>";
 	
-	$hasnosocials = true;
+    $hasnosocials = true;
     foreach ($social as $k => $arr) {
         if (!um_profile($k)) continue; // Skip non-existent social profiles
-		$hasnosocials = false;
+        $hasnosocials = false;
 		
         $match = array_key_exists('match', $arr) ? (is_array($arr['match']) ? $arr['match'][0] : $arr['match']) : null;
 		
