@@ -12,8 +12,9 @@ function dmkrtz_um_show_socials($atts) {
         return;
     }
 
-    // Fetch the um user for the post author if on a single post or page
-    if (is_single() || is_page()) {
+    // Fetch the UM user for the post author if on a single post or page
+	// and check if shortcode forces displaying socials of current user when using force-user='true'
+    if ((is_single() || is_page()) && !( isset($atts['force-user']) && $atts['force-user'] )) {
         um_fetch_user(get_the_author_meta("ID"));
     }
 
