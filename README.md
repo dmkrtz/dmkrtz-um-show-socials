@@ -19,8 +19,8 @@ The shortcode allows these attributes:
 ### Examples
 - `[um-show-socials style="text-align: center;"]`
 -> `<div class='um-profile-connect um-member-connect' style="text-align: center;">`
-- `[um-show-socials force-user="true"]`
--> prevents fetching the post or page author
+- `[um-show-socials force-user]`
+-> prevents fetching of the post or page author but show current user socials instead
 
 ## Dependencies
 Of course this shortcode needs the user plugin [Ultimate Member](https://ultimatemember.com/) in order to work.
