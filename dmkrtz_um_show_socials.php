@@ -20,17 +20,13 @@ function dmkrtz_um_show_socials($atts) {
     // Get social fields
     $social = array_filter(UM()->builtin()->get_all_user_fields(), fn($args) => isset($args['advanced']) && $args['advanced'] == 'social');
 
-    if (!$social) {
-        return; // No social fields found
-    }
+    if (!$social) return; // No social fields found
 
     $style = isset($atts['style']) ? " style='{$atts['style']}'" : '';
     $output = "<div class='um-profile-connect um-member-connect'$style>";
 
     foreach ($social as $k => $arr) {
-        if (!um_profile($k)) {
-            continue; // Skip non-existent social profiles
-        }
+        if (!um_profile($k)) continue; // Skip non-existent social profiles
 
         $match = array_key_exists('match', $arr) ? (is_array($arr['match']) ? $arr['match'][0] : $arr['match']) : null;
 
